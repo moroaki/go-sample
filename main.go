@@ -18,7 +18,7 @@ func handler(writer http.ResponseWriter, request *http.Request) {
 func write() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("akira")
 	if err != nil {
 		log.Fatal(err)
 	}
