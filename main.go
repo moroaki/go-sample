@@ -18,11 +18,13 @@ func handler(writer http.ResponseWriter, request *http.Request) {
 func write() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-	message, err := greetings.Hello("akira")
+
+  names := []string {"akira", "moroishi", "moroaki"}
+	messages, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(message)
+	fmt.Println(messages)
 }
 
 func main() {
